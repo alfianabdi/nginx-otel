@@ -105,6 +105,11 @@ add_compile_options(-Wall -Wtype-limits -Werror)
 add_library(ngx_otel_module MODULE
     src/http_module.cpp
     src/modules.c
+    src/fast_random_number_generator.h
+    src/fork.h
+    src/fork_unix.cc
+    src/random.cc
+    src/random.h
     ${PROTO_SOURCES})
 
 # avoid 'lib' prefix in binary name
